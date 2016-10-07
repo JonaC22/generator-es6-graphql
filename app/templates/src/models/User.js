@@ -11,7 +11,7 @@ const UserSchema = new Schema({
 });
 
 UserSchema
-.virtual('createdAt')
+.path('createdAt')
 .get(function () {
   return this._id.getTimestamp();
 });
